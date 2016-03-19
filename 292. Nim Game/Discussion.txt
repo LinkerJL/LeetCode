@@ -1,0 +1,10 @@
+find the pattern:
+num	win	strategy
+1	Y
+2	Y
+3	Y
+4	N
+5	Y	take 1, so become 4 but reverse
+6	Y	take 2, so become 4 but reverse
+7	Y	take 3, so become 4 but reverse
+8	N
