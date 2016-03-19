@@ -5,10 +5,9 @@ using std::vector;
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        int result = nums[0];
-        size_t len = nums.size();
-        for (size_t i = 1; i < len; i++) {
-            result ^= nums[i];
+        int result = 0;
+        for (int i : nums) {
+            result ^= i;
         }
         return result;
     }
