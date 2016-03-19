@@ -112,6 +112,12 @@
   <ItemGroup>
     <ClInclude Include="Solution.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Description.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Discussion.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

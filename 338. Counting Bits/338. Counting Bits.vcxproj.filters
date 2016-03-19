@@ -19,4 +19,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Description.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Discussion.txt" />
+  </ItemGroup>
 </Project>
