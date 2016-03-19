@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "338. Counting Bits", "338. 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "292. Nim Game", "292. Nim Game\292. Nim Game.vcxproj", "{340FE9D9-1265-4382-8C00-4705D3AA7AC7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "136. Single Number", "136. Single Number\136. Single Number.vcxproj", "{3C0502B7-E25B-49B6-8286-82C72DDCFE18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{340FE9D9-1265-4382-8C00-4705D3AA7AC7}.Release|x64.Build.0 = Release|x64
 		{340FE9D9-1265-4382-8C00-4705D3AA7AC7}.Release|x86.ActiveCfg = Release|Win32
 		{340FE9D9-1265-4382-8C00-4705D3AA7AC7}.Release|x86.Build.0 = Release|Win32
+		{3C0502B7-E25B-49B6-8286-82C72DDCFE18}.Debug|x64.ActiveCfg = Debug|x64
+		{3C0502B7-E25B-49B6-8286-82C72DDCFE18}.Debug|x64.Build.0 = Debug|x64
+		{3C0502B7-E25B-49B6-8286-82C72DDCFE18}.Debug|x86.ActiveCfg = Debug|Win32
+		{3C0502B7-E25B-49B6-8286-82C72DDCFE18}.Debug|x86.Build.0 = Debug|Win32
+		{3C0502B7-E25B-49B6-8286-82C72DDCFE18}.Release|x64.ActiveCfg = Release|x64
+		{3C0502B7-E25B-49B6-8286-82C72DDCFE18}.Release|x64.Build.0 = Release|x64
+		{3C0502B7-E25B-49B6-8286-82C72DDCFE18}.Release|x86.ActiveCfg = Release|Win32
+		{3C0502B7-E25B-49B6-8286-82C72DDCFE18}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
