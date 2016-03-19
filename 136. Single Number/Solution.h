@@ -1,13 +1,13 @@
 #pragma once
 #include <vector>
 using std::vector;
-#include <set>
-using std::set;
+#include <unordered_set>
+using std::unordered_set;
 
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        set<int> arise;
+        unordered_set<int> arise;
         for (auto iter = nums.begin(); iter != nums.end(); iter++) {
             auto found = arise.find(*iter);
             if (found != arise.end()) {
