@@ -7,10 +7,6 @@ public:
         if (num == 0) {
             return 0;
         }
-        int result = num % 9;
-        if (result) {
-            return result;
-        }
-        return 9;
+        return ((num - 1) % 9) + 1;
     }
 };
