@@ -6,13 +6,13 @@ class Solution {
 public:
     vector<int> countBits(int num) {
         vector<int> result(num + 1);
-        for (int i = 0; i <= num; i++) {
-            int j = i, k = 0;
-            while (j > 0) {
-                k += j & 0x01;
-                j >>= 1;
+        int cur_power_of_2 = 1, next_power_of_2 = 2;
+        for (int i = 1; i <= num; i++) {
+            if (i >= next_power_of_2) {
+                cur_power_of_2 = next_power_of_2;
+                next_power_of_2 <<= 1;
             }
-            result[i] = k;
+            result[i] = result[i - cur_power_of_2] + 1;
         }
         return result;
     }
