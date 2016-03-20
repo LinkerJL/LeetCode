@@ -1,4 +1,6 @@
 #pragma once
+#include <algorithm>
+using std::max;
 
 struct TreeNode {
     int val;
@@ -15,7 +17,6 @@ public:
         }
         int left_max_depth = maxDepth(root->left);
         int right_max_depth = maxDepth(root->right);
-        return (left_max_depth > right_max_depth) ?
-            left_max_depth + 1 : right_max_depth + 1;
+        return max(left_max_depth, right_max_depth) + 1;
     }
 };
