@@ -1,19 +1,14 @@
 #pragma once
 #include <vector>
 using std::vector;
+#include <algorithm>
+using std::remove;
+using std::fill;
 
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        int j = 0;
-        int len = nums.size();
-        for (int i = 0; i < len; i++) {
-            if (nums[i]) {
-                nums[j++] = nums[i];
-            }
-        }
-        while (j < len) {
-            nums[j++] = 0;
-        }
+        auto end = remove(nums.begin(), nums.end(), 0);
+        fill(end, nums.end(), 0);
     }
 };
