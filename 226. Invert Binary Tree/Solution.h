@@ -1,4 +1,6 @@
 #pragma once
+#include <utility>
+using std::swap;
 
 struct TreeNode {
     int val;
@@ -10,12 +12,11 @@ struct TreeNode {
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
-        if (!root) {
-            return root;
+        if (root) {
+            swap(root->left, root->right);
+            invertTree(root->left);
+            invertTree(root->right);
         }
-        TreeNode* node = root->right;
-        root->right = invertTree(root->left);
-        root->left = invertTree(node);
         return root;
     }
 };
