@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "283. Move Zeroes", "283. Mo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "237. Delete Node in a Linked List", "237. Delete Node in a Linked List\237. Delete Node in a Linked List.vcxproj", "{BC4104E2-ADD6-41A7-A20F-279FDD15F708}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "260. Single Number III", "260. Single Number III\260. Single Number III.vcxproj", "{6771AFAF-BD43-45F0-A887-5A7A931D1886}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{BC4104E2-ADD6-41A7-A20F-279FDD15F708}.Release|x64.Build.0 = Release|x64
 		{BC4104E2-ADD6-41A7-A20F-279FDD15F708}.Release|x86.ActiveCfg = Release|Win32
 		{BC4104E2-ADD6-41A7-A20F-279FDD15F708}.Release|x86.Build.0 = Release|Win32
+		{6771AFAF-BD43-45F0-A887-5A7A931D1886}.Debug|x64.ActiveCfg = Debug|x64
+		{6771AFAF-BD43-45F0-A887-5A7A931D1886}.Debug|x64.Build.0 = Debug|x64
+		{6771AFAF-BD43-45F0-A887-5A7A931D1886}.Debug|x86.ActiveCfg = Debug|Win32
+		{6771AFAF-BD43-45F0-A887-5A7A931D1886}.Debug|x86.Build.0 = Debug|Win32
+		{6771AFAF-BD43-45F0-A887-5A7A931D1886}.Release|x64.ActiveCfg = Release|x64
+		{6771AFAF-BD43-45F0-A887-5A7A931D1886}.Release|x64.Build.0 = Release|x64
+		{6771AFAF-BD43-45F0-A887-5A7A931D1886}.Release|x86.ActiveCfg = Release|Win32
+		{6771AFAF-BD43-45F0-A887-5A7A931D1886}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
