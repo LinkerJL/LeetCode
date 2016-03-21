@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<SolutionLoadInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ActiveProfileName>&lt;Active Profile&gt;</ActiveProfileName>
+  <Profiles>
+    <SolutionLoadProfile>
+      <ProfileName>&lt;Active Profile&gt;</ProfileName>
+      <Projects>
+        <ProjectLoadInfo>
+          <ProjectGuid>b1694496-000c-400e-8c62-9dabaf8bfb69</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>340fe9d9-1265-4382-8c00-4705d3aa7ac7</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>3c0502b7-e25b-49b6-8286-82c72ddcfe18</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>adfa15e2-0ccd-4a85-895d-ad13e4013c5e</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>6401bd65-e6c3-43a9-864f-83657016d01b</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>7b7e837d-3ddc-40aa-a14a-981335bb1b4f</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>d6ebccb5-9705-4529-b13a-3509a3e69618</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>bc4104e2-add6-41a7-a20f-279fdd15f708</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>6771afaf-bd43-45f0-a887-5a7a931d1886</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>5e5bd0ed-1316-45cb-8060-878daf74a8a7</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+      </Projects>
+    </SolutionLoadProfile>
+  </Profiles>
+</SolutionLoadInfo>
