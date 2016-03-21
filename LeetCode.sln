@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "100. Same Tree", "100. Same
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "238. Product of Array Except Self", "238. Product of Array Except Self\238. Product of Array Except Self.vcxproj", "{01981572-002C-48E5-8B67-2B797CEBCD83}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "122. Best Time to Buy and Sell Stock II", "122. Best Time to Buy and Sell Stock II\122. Best Time to Buy and Sell Stock II.vcxproj", "{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{01981572-002C-48E5-8B67-2B797CEBCD83}.Release|x64.Build.0 = Release|x64
 		{01981572-002C-48E5-8B67-2B797CEBCD83}.Release|x86.ActiveCfg = Release|Win32
 		{01981572-002C-48E5-8B67-2B797CEBCD83}.Release|x86.Build.0 = Release|Win32
+		{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}.Debug|x64.ActiveCfg = Debug|x64
+		{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}.Debug|x64.Build.0 = Debug|x64
+		{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}.Debug|x86.ActiveCfg = Debug|Win32
+		{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}.Debug|x86.Build.0 = Debug|Win32
+		{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}.Release|x64.ActiveCfg = Release|x64
+		{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}.Release|x64.Build.0 = Release|x64
+		{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}.Release|x86.ActiveCfg = Release|Win32
+		{4C81CF97-E115-4D07-B7C0-9FE51AE2FF6D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
