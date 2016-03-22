@@ -1,0 +1,14 @@
+first, think it directly with recursion:
+let f(r) = LCA(r, p, q)
+then f(r) = f(r->left) ? f(r->left) : (f(r->right) ? f(r->right) : (r or NULL) )
+                                                                    ^^^^^^^^^
+when !f(r->left) && !f(r->right), how to determine the result is r or NULL?
+that's not easy
+
+LCA(r, p, q) should return NULL when they are not in the same tree
+but, think it again, LCA(r, p, q) is undefined in such condition
+
+what if LCA(r, p, q) returns r if r equals p or q?
+a lot easier
+
+f(r) = !f(r->left) ? f(r->right) : (!f(r->right) ? r->left : r )

@@ -27,4 +27,7 @@
   <ItemGroup>
     <None Include="Description.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Discussion.txt" />
+  </ItemGroup>
 </Project>
