@@ -45,6 +45,18 @@
           <ProjectGuid>5e5bd0ed-1316-45cb-8060-878daf74a8a7</ProjectGuid>
           <LoadPriority>BackgroundLoad</LoadPriority>
         </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>01981572-002c-48e5-8b67-2b797cebcd83</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>4c81cf97-e115-4d07-b7c0-9fe51ae2ff6d</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
+        <ProjectLoadInfo>
+          <ProjectGuid>9b755efa-346f-41bd-aea8-595cd83dd611</ProjectGuid>
+          <LoadPriority>BackgroundLoad</LoadPriority>
+        </ProjectLoadInfo>
       </Projects>
     </SolutionLoadProfile>
   </Profiles>
