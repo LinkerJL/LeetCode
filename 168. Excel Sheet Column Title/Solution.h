@@ -11,9 +11,8 @@ public:
         string str;
         int m;
         while (n--) {
-            m = n % letter_count;
-            n = n / letter_count;
-            str += m + 'A';
+            str += (n % letter_count) + 'A';
+            n /= letter_count;
         }
         reverse(str.begin(), str.end());
         return str;
