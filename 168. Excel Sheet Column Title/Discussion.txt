@@ -1,0 +1,6 @@
+find the pattern:
+num	string
+1	A	1 % 26 -1 + 'A'
+26	Z
+27	AA
+100	CW	100 % 26 -1 + 'A'->W 100 / 26 -1 + 'A'->C
