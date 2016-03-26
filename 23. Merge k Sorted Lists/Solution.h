@@ -1,8 +1,6 @@
 #pragma once
 #include <vector>
 using std::vector;
-#include <queue>
-using std::priority_queue;
 
 struct ListNode {
     int val;
@@ -13,28 +11,31 @@ struct ListNode {
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        ListNode head(0);
-        priority_queue<ListNode*, vector<ListNode*>, Compare> q;
-        for (auto node : lists) {
-            if (node) {
-                q.push(node);
-            }
+        int len = lists.size();
+        if (!len) {
+            return nullptr;
         }
-        ListNode *curNode = &head;
-        while (!q.empty()) {
-            curNode->next = q.top();
-            q.pop();
-            curNode = curNode->next;
-            if (curNode->next) {
-                q.push(curNode->next);
+        while (len > 1) {
+            // try to make every list size close
+            for (int i = 0; i < (len >> 1); i++) {
+                lists[i] = mergeTwoLists(lists[i], lists[len - 1 - i]);
             }
+            len = (len + 1) >> 1;
         }
-        return head.next;
+        return lists[0];
     }
-private:
-    struct Compare {
-        bool operator()(const ListNode* a, const ListNode* b) {
-            return a->val > b->val;
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        if (!l1) {
+            return l2;
         }
-    };
+        if (!l2) {
+            return l1;
+        }
+        if (l1->val <= l2->val) {
+            l1->next = mergeTwoLists(l1->next, l2);
+            return l1;
+        }
+        l2->next = mergeTwoLists(l1, l2->next);
+        return l2;
+    }
 };
