@@ -31,17 +31,11 @@ public:
         if (!l2) {
             return l1;
         }
-        ListNode *la = l1, *lb = l2;
-        while (true) {
-            if (la->val > lb->val) {
-                swap(*la, *lb);
-            }
-            if (!la->next) {
-                la->next = lb;
-                break;
-            }
-            la = la->next;
+        if (l1->val <= l2->val) {
+            l1->next = mergeTwoLists(l1->next, l2);
+            return l1;
         }
-        return l1;
+        l2->next = mergeTwoLists(l1, l2->next);
+        return l2;
     }
 };
