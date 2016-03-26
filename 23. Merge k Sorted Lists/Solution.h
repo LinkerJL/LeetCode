@@ -1,9 +1,10 @@
 #pragma once
 #include <vector>
 using std::vector;
-#include <utility>
-using std::swap;
-#include <cstdlib>
+#include <algorithm>
+using std::make_heap;
+using std::pop_heap;
+using std::push_heap;
 
 struct ListNode {
     int val;
@@ -14,28 +15,29 @@ struct ListNode {
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        int len = lists.size();
-        if (!len) {
-            return nullptr;
+        ListNode head(0);
+        vector<ListNode*> v;
+        for (auto node : lists) {
+            if (node) {
+                v.push_back(node);
+            }
         }
-        while (--len) {
-            swap(lists[rand() % len], lists[len]);
-            lists[len - 1] = mergeTwoLists(lists[len - 1], lists[len]);
+        make_heap(v.begin(), v.end(), heapComp);
+        ListNode * curNode = &head;
+        while (v.size()) {
+            curNode->next = v.front();
+            pop_heap(v.begin(), v.end(), heapComp);
+            v.pop_back();
+            curNode = curNode->next;
+            if (curNode->next) {
+                v.push_back(curNode->next);
+                push_heap(v.begin(), v.end(), heapComp);
+            }
         }
-        return lists[0];
+        return head.next;
     }
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        if (!l1) {
-            return l2;
-        }
-        if (!l2) {
-            return l1;
-        }
-        if (l1->val <= l2->val) {
-            l1->next = mergeTwoLists(l1->next, l2);
-            return l1;
-        }
-        l2->next = mergeTwoLists(l1, l2->next);
-        return l2;
+private:
+    static bool heapComp(ListNode* a, ListNode* b) {
+        return a->val > b->val;
     }
 };
