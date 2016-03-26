@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "168. Excel Sheet Column Tit
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "23. Merge k Sorted Lists", "23. Merge k Sorted Lists\23. Merge k Sorted Lists.vcxproj", "{4C71841B-E90B-43C5-9F74-780D822223B6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "326. Power of Three", "326. Power of Three\326. Power of Three.vcxproj", "{872530B6-0C91-46E9-93FD-CA0D5892BC69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{4C71841B-E90B-43C5-9F74-780D822223B6}.Release|x64.Build.0 = Release|x64
 		{4C71841B-E90B-43C5-9F74-780D822223B6}.Release|x86.ActiveCfg = Release|Win32
 		{4C71841B-E90B-43C5-9F74-780D822223B6}.Release|x86.Build.0 = Release|Win32
+		{872530B6-0C91-46E9-93FD-CA0D5892BC69}.Debug|x64.ActiveCfg = Debug|x64
+		{872530B6-0C91-46E9-93FD-CA0D5892BC69}.Debug|x64.Build.0 = Debug|x64
+		{872530B6-0C91-46E9-93FD-CA0D5892BC69}.Debug|x86.ActiveCfg = Debug|Win32
+		{872530B6-0C91-46E9-93FD-CA0D5892BC69}.Debug|x86.Build.0 = Debug|Win32
+		{872530B6-0C91-46E9-93FD-CA0D5892BC69}.Release|x64.ActiveCfg = Release|x64
+		{872530B6-0C91-46E9-93FD-CA0D5892BC69}.Release|x64.Build.0 = Release|x64
+		{872530B6-0C91-46E9-93FD-CA0D5892BC69}.Release|x86.ActiveCfg = Release|Win32
+		{872530B6-0C91-46E9-93FD-CA0D5892BC69}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
