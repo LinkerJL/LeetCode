@@ -1,10 +1,8 @@
 #pragma once
 #include <vector>
 using std::vector;
-#include <algorithm>
-using std::make_heap;
-using std::pop_heap;
-using std::push_heap;
+#include <queue>
+using std::priority_queue;
 
 struct ListNode {
     int val;
@@ -16,28 +14,27 @@ class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
         ListNode head(0);
-        vector<ListNode*> v;
+        priority_queue<ListNode*, vector<ListNode*>, Compare> q;
         for (auto node : lists) {
             if (node) {
-                v.push_back(node);
+                q.push(node);
             }
         }
-        make_heap(v.begin(), v.end(), heapComp);
-        ListNode * curNode = &head;
-        while (v.size()) {
-            curNode->next = v.front();
-            pop_heap(v.begin(), v.end(), heapComp);
-            v.pop_back();
+        ListNode *curNode = &head;
+        while (!q.empty()) {
+            curNode->next = q.top();
+            q.pop();
             curNode = curNode->next;
             if (curNode->next) {
-                v.push_back(curNode->next);
-                push_heap(v.begin(), v.end(), heapComp);
+                q.push(curNode->next);
             }
         }
         return head.next;
     }
 private:
-    static bool heapComp(ListNode* a, ListNode* b) {
-        return a->val > b->val;
-    }
+    struct Compare {
+        bool operator()(const ListNode* a, const ListNode* b) {
+            return a->val > b->val;
+        }
+    };
 };
