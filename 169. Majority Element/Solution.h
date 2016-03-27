@@ -5,20 +5,19 @@ using std::vector;
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        //! Moore Voting Algorithm
-        // Basic idea is if we cancel out each occurrence of an element e with
-        // all the other elements that are different from e than e will exist
-        // till end if it is a majority element.
-        int major, counts = 0;
+        const int byte_bits = 8;
+        int major = 0;
         int len = nums.size();
-        for (int n : nums) {
-            if (!counts) {
-                major = n;
-                counts = 1;
-            } else if (major == n) {
-                counts += 1;
-            } else {
-                counts -= 1;
+        for (int i = 0; i < sizeof(int) * byte_bits; i++) {
+            int mask = 1 << i, bit_counts = 0;
+            for (int n : nums) {
+                if (n & mask) {
+                    bit_counts++;
+                    if (bit_counts > len / 2) {
+                        major |= mask;
+                        break;
+                    }
+                }
             }
         }
         return major;
