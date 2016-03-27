@@ -14,7 +14,8 @@ public:
                 return digits;
             }
         }
-        digits.insert(digits.begin(), 1);
+        digits[0] = 1;
+        digits.push_back(0);
         return digits;
     }
 };
