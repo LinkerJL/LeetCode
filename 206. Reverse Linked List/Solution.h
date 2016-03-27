@@ -9,13 +9,12 @@ struct ListNode {
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode *pre = nullptr, *cur = head, *nex;
-        while (cur) {
-            nex = cur->next;
-            cur->next = pre;
-            pre = cur;
-            cur = nex;
+        if (!(head && head->next)) {
+            return head;
         }
-        return pre;
+        ListNode *node = reverseList(head->next);
+        head->next->next = head;
+        head->next = nullptr;
+        return node;
     }
 };
