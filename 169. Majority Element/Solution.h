@@ -1,25 +1,14 @@
 #pragma once
 #include <vector>
 using std::vector;
-#include <cstdlib>
-#include <ctime>
+#include <algorithm>
+using std::nth_element;
 
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         int len = nums.size();
-        srand((unsigned int)time(nullptr));
-        while (true) {
-            int candidate = nums[rand() % len];
-            int count = 0;
-            for (int n : nums) {
-                if (candidate == n) {
-                    count++;
-                    if (count > len / 2) {
-                        return candidate;
-                    }
-                }
-            }
-        }
+        nth_element(nums.begin(), nums.begin() + len / 2, nums.end());
+        return nums[len / 2];
     }
 };
