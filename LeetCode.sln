@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "130. Surrounded Regions", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "217. Contains Duplicate", "217. Contains Duplicate\217. Contains Duplicate.vcxproj", "{35FEC896-2204-41F1-8DD2-3E90FA5AA285}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "169. Majority Element", "169. Majority Element\169. Majority Element.vcxproj", "{81E89F06-5839-44EA-95A2-CF651B894C86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -221,6 +223,14 @@ Global
 		{35FEC896-2204-41F1-8DD2-3E90FA5AA285}.Release|x64.Build.0 = Release|x64
 		{35FEC896-2204-41F1-8DD2-3E90FA5AA285}.Release|x86.ActiveCfg = Release|Win32
 		{35FEC896-2204-41F1-8DD2-3E90FA5AA285}.Release|x86.Build.0 = Release|Win32
+		{81E89F06-5839-44EA-95A2-CF651B894C86}.Debug|x64.ActiveCfg = Debug|x64
+		{81E89F06-5839-44EA-95A2-CF651B894C86}.Debug|x64.Build.0 = Debug|x64
+		{81E89F06-5839-44EA-95A2-CF651B894C86}.Debug|x86.ActiveCfg = Debug|Win32
+		{81E89F06-5839-44EA-95A2-CF651B894C86}.Debug|x86.Build.0 = Debug|Win32
+		{81E89F06-5839-44EA-95A2-CF651B894C86}.Release|x64.ActiveCfg = Release|x64
+		{81E89F06-5839-44EA-95A2-CF651B894C86}.Release|x64.Build.0 = Release|x64
+		{81E89F06-5839-44EA-95A2-CF651B894C86}.Release|x86.ActiveCfg = Release|Win32
+		{81E89F06-5839-44EA-95A2-CF651B894C86}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
