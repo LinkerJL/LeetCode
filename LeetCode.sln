@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "338. Counting Bits", "338. Counting Bits\338. Counting Bits.vcxproj", "{B1694496-000C-400E-8C62-9DABAF8BFB69}"
 EndProject
@@ -58,6 +58,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "139. Word Break", "139. Word Break\139. Word Break.vcxproj", "{E7C1DC37-622E-41B6-91D1-4FEF842833B9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "60. Permutation Sequence", "60. Permutation Sequence\60. Permutation Sequence.vcxproj", "{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "328. Odd Even Linked List", "328. Odd Even Linked List\328. Odd Even Linked List.vcxproj", "{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -291,6 +293,14 @@ Global
 		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Release|x64.Build.0 = Release|x64
 		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Release|x86.ActiveCfg = Release|Win32
 		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Release|x86.Build.0 = Release|Win32
+		{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}.Debug|x64.ActiveCfg = Debug|x64
+		{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}.Debug|x64.Build.0 = Debug|x64
+		{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}.Debug|x86.ActiveCfg = Debug|Win32
+		{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}.Debug|x86.Build.0 = Debug|Win32
+		{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}.Release|x64.ActiveCfg = Release|x64
+		{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}.Release|x64.Build.0 = Release|x64
+		{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}.Release|x86.ActiveCfg = Release|Win32
+		{79794D39-FF8A-40DA-B8DE-898AE46C9D6E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
