@@ -12,16 +12,12 @@ public:
         if (!head) {
             return nullptr;
         }
-        ListNode *node_even_pre = head, *node_odd_pre = head->next, *node_odd;
-        while (node_odd_pre && node_odd_pre->next) {
-            node_odd = node_odd_pre->next;
-            node_odd_pre->next = node_odd->next;
-            node_odd->next = node_even_pre->next;
-            node_even_pre->next = node_odd;
-
-            node_even_pre = node_odd;
-            node_odd_pre = node_odd_pre->next;
+        auto node_odd = head, node_even_head = head->next, node_even = node_even_head;
+        while (node_even && node_even->next) {
+            node_odd = node_odd->next = node_even->next;
+            node_even = node_even->next = node_odd->next;
         }
+        node_odd->next = node_even_head;
         return head;
     }
 };
