@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "27. Remove Element", "27. R
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "139. Word Break", "139. Word Break\139. Word Break.vcxproj", "{E7C1DC37-622E-41B6-91D1-4FEF842833B9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "60. Permutation Sequence", "60. Permutation Sequence\60. Permutation Sequence.vcxproj", "{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -281,6 +283,14 @@ Global
 		{E7C1DC37-622E-41B6-91D1-4FEF842833B9}.Release|x64.Build.0 = Release|x64
 		{E7C1DC37-622E-41B6-91D1-4FEF842833B9}.Release|x86.ActiveCfg = Release|Win32
 		{E7C1DC37-622E-41B6-91D1-4FEF842833B9}.Release|x86.Build.0 = Release|Win32
+		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Debug|x64.ActiveCfg = Debug|x64
+		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Debug|x64.Build.0 = Debug|x64
+		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Debug|x86.ActiveCfg = Debug|Win32
+		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Debug|x86.Build.0 = Debug|Win32
+		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Release|x64.ActiveCfg = Release|x64
+		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Release|x64.Build.0 = Release|x64
+		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Release|x86.ActiveCfg = Release|Win32
+		{CEF8E74E-03B1-4B52-B3D4-F172D2EDBC40}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
