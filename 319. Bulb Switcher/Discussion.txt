@@ -20,3 +20,15 @@ n		result
 16		4
 
 so result is floor(n^(1/2)).
+
+A bulb will be toggled only during the round of its factors. 
+e.g. 6th bulb will be toggled at 1,2,3,6.
+The final state of a bulb only depends on if the number of its factor is odd or even.
+If odd, the bulb is on, otherwise it's off.
+
+The number of one number's factor is odd if and only if it is a perfect square.
+(take 18 and 16 as an example: 18 has factor pairs of [1,18],[2,9],[3,6]
+while 16 has factor pairs of [1,16],[2,8],[4], as you can see, perfect squares will
+always have a factor pair that contains only one number)
+
+So we only need to find out how many perfect squares are smaller than n.
