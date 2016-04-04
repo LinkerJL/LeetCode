@@ -6,9 +6,9 @@ class Solution {
 public:
     int missingNumber(vector<int>& nums) {
         int len = nums.size();
-        int result = 0;
+        int result = len;
         for (int i = 0; i < len; i++) {
-            result ^= (i + 1) ^ nums[i];
+            result ^= i ^ nums[i];
         }
         return result;
     }
