@@ -69,6 +69,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "268. Missing Number", "268.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "278. First Bad Version", "278. First Bad Version\278. First Bad Version.vcxproj", "{C8E133B9-3F84-430F-92F3-95182D9F84DA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "234. Palindrome Linked List", "234. Palindrome Linked List\234. Palindrome Linked List.vcxproj", "{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -341,6 +343,14 @@ Global
 		{C8E133B9-3F84-430F-92F3-95182D9F84DA}.Release|x64.Build.0 = Release|x64
 		{C8E133B9-3F84-430F-92F3-95182D9F84DA}.Release|x86.ActiveCfg = Release|Win32
 		{C8E133B9-3F84-430F-92F3-95182D9F84DA}.Release|x86.Build.0 = Release|Win32
+		{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}.Debug|x64.ActiveCfg = Debug|x64
+		{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}.Debug|x64.Build.0 = Debug|x64
+		{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}.Debug|x86.ActiveCfg = Debug|Win32
+		{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}.Debug|x86.Build.0 = Debug|Win32
+		{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}.Release|x64.ActiveCfg = Release|x64
+		{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}.Release|x64.Build.0 = Release|x64
+		{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}.Release|x86.ActiveCfg = Release|Win32
+		{F8EFCE2E-DB16-40EB-9FB8-3FC223DF219D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
