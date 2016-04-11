@@ -3,17 +3,21 @@
 class Solution {
 public:
     bool isHappy(int n) {
-        // using the fact that 2-6 all are unhappy and
-        // all unhappy number loop hits 4
-        // see: https://en.wikipedia.org/wiki/Happy_number
-        while (n > 6) {
-            int next = 0;
-            while (n) {
-                next += (n % 10) * (n % 10);
-                n /= 10;
-            }
-            n = next;
+        // Floyd's Cycle Detection Algorithm
+        int slow = n, fast = n;
+        do {
+            slow = digitSquareSum(slow);
+            fast = digitSquareSum(digitSquareSum(fast));
+        } while (fast != 1 && slow != fast);
+        return fast == 1;
+    }
+private:
+    int digitSquareSum(int n) {
+        int sum = 0;
+        while (n) {
+            sum += (n % 10) * (n % 10);
+            n /= 10;
         }
-        return n == 1;
+        return sum;
     }
 };
