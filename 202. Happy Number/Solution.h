@@ -1,23 +1,18 @@
 #pragma once
-#include <vector>
-using std::vector;
-#include <set>
-using std::set;
 
 class Solution {
 public:
     bool isHappy(int n) {
-        set<int> path;
-        while (n != 1 && path.find(n) == path.end()) {
-            path.insert(n);
-            vector<int> digit;
+        // using the fact that 2-6 all are unhappy and
+        // all unhappy number loop hits 4
+        // see: https://en.wikipedia.org/wiki/Happy_number
+        while (n > 6) {
+            int next = 0;
             while (n) {
-                digit.push_back(n % 10);
+                next += (n % 10) * (n % 10);
                 n /= 10;
             }
-            for (auto d : digit) {
-                n += d*d;
-            }
+            n = next;
         }
         return n == 1;
     }
