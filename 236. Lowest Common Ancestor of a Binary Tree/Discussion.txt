@@ -11,4 +11,4 @@ but, think it again, LCA(r, p, q) is undefined in such condition
 what if LCA(r, p, q) returns r if r equals p or q?
 a lot easier
 
-f(r) = !f(r->left) ? f(r->right) : (!f(r->right) ? r->left : r )
+f(r) = !f(r->left) ? f(r->right) : (!f(r->right) ? f(r->left) : r )
