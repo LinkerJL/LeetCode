@@ -12,23 +12,18 @@ public:
         if (numRows <= 1) {
             return s;
         }
-        auto array = unique_ptr<int[]>(new int[2 * numRows - 2]);
-        for (auto i = 0; i < numRows; ++i) {
-            array[i] = i;
-        }
-        for (auto i = numRows; i < 2 * numRows - 2; ++i) {
-            array[i] = 2 * numRows - 2 - i;
-        }
         auto ss = unique_ptr<string[]>(new string[numRows]);
         auto len = s.size();
-        for (auto i = 0; i < len; ) {
-            for (auto j = 0; j < 2 * numRows - 2; ++j) {
-                ss[array[j]].push_back(s[i]);
-                ++i;
-                if (i >= len) {
-                    break;
-                }
+        auto step = 1;
+        for (auto i = 0, j = 0; i < len; ++i) {
+            ss[j].push_back(s[i]);
+            if (j == numRows - 1) {
+                step = -1;
             }
+            if (j == 0) {
+                step = 1;
+            }
+            j += step;
         }
         return accumulate(&ss[0], &ss[numRows], string(""));
     }
