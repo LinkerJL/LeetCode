@@ -5,6 +5,7 @@ then f(r) = f(r->left) ? f(r->left) : (f(r->right) ? f(r->right) : (r or NULL) )
 when !f(r->left) && !f(r->right), how to determine the result is r or NULL?
 that's not easy
 
+solution #1
 LCA(r, p, q) should return NULL when they are not in the same tree
 but, think it again, LCA(r, p, q) is undefined in such condition
 
@@ -12,3 +13,12 @@ what if LCA(r, p, q) returns r if r equals p or q?
 a lot easier
 
 f(r) = !f(r->left) ? f(r->right) : (!f(r->right) ? f(r->left) : r )
+
+solution #2
+consider a helper function g(r), it means whether r tree contains p or q.
+so g(r) = g(r->left) || g(r->right)
+and f(r) = 
+f(r->left) ? f(r->left) : 
+    f(r->right) ? f(r->right) :
+        (r == p || r == q), g(r->left) and g(r->right), at least two true ? r :
+            NULL
