@@ -6,32 +6,38 @@ class Queue {
 public:
     // Push element x to the back of queue.
     void push(int x) {
-        while (!master_.empty()) {
-            slave_.push(master_.top());
-            master_.pop();
-        }
-        master_.push(x);
-        while (!slave_.empty()) {
-            master_.push(slave_.top());
-            slave_.pop();
-        }
+        input_.push(x);
     }
 
     // Removes the element from in front of queue.
     void pop(void) {
-        master_.pop();
+        if (output_.empty()) {
+            move();
+        }
+        output_.pop();
     }
 
     // Get the front element.
     int peek(void) {
-        return master_.top();
+        if (output_.empty()) {
+            move();
+        }
+        return output_.top();
     }
 
     // Return whether the queue is empty.
     bool empty(void) {
-        return master_.empty();
+        return input_.empty() && output_.empty();
     }
 private:
-    stack<int> master_;
-    stack<int> slave_;
+    // Move all of input to output.
+    void move(void) {
+        while (!input_.empty()) {
+            output_.push(input_.top());
+            input_.pop();
+        }
+    }
+
+    stack<int> input_;
+    stack<int> output_;
 };
