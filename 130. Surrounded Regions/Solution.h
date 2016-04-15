@@ -18,22 +18,18 @@ public:
         // top & bottom
         for (int i = 0; i < width_; i++) {
             if (board[0][i] == O) {
-                board[0][i] = B;
                 depthFirstSearch(board, { 0, i });
             }
             if (board[height_ - 1][i] == O) {
-                board[height_ - 1][i] = B;
                 depthFirstSearch(board, { height_ - 1, i });
             }
         }
         // left & right
         for (int i = 1; i < height_ - 1; i++) {
             if (board[i][0] == O) {
-                board[i][0] = B;
                 depthFirstSearch(board, { i, 0 });
             }
             if (board[i][width_ - 1] == O) {
-                board[i][width_ - 1] = B;
                 depthFirstSearch(board, { i, width_ - 1 });
             }
         }
@@ -52,8 +48,9 @@ private:
     enum { O='O', X='X', B='B' };
     int height_;
     int width_;
-    void depthFirstSearch(vector<vector<char>>& board, Pos p) {
+    void depthFirstSearch(vector<vector<char>>& board, const Pos& p) {
         static const Pos move[4] ={ { -1, 0 },{ 1, 0 },{ 0, -1 },{ 0, 1 } };
+        board[p.first][p.second] = B;
         for (auto& m : move) {
             Pos new_p(p.first + m.first, p.second + m.second);
             if (new_p.first <= 0 || new_p.first >= height_ - 1 ||
@@ -61,7 +58,6 @@ private:
                 continue;
             }
             if (board[new_p.first][new_p.second] == O) {
-                board[new_p.first][new_p.second] = B;
                 depthFirstSearch(board, new_p);
             }
         }
