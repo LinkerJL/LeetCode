@@ -1,17 +1,14 @@
 #pragma once
+#include <climits>
 
 class Solution {
 public:
     int reverse(int x) {
-        auto result = 0;
+        long long result = 0;
         while (x) {
-            auto tmp = result * 10 + x % 10;
-            if (tmp / 10 != result) {
-                return 0;
-            }
-            result = tmp;
+            result = 10 * result + x % 10;
             x /= 10;
         }
-        return result;
+        return (result < INT_MIN || result > INT_MAX) ? 0 : result;
     }
 };
