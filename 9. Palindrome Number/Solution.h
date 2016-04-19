@@ -3,15 +3,16 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        if (x < 10) {
-            return x >= 0;
+        // avoid misjudgment.
+        if (x < 0 || (x != 0 && x % 10 == 0)) {
+            return false;
         }
-        auto y = 0LL;
-        auto n = x;
-        while (n) {
-            y = y * 10 + n % 10;
-            n /= 10;
+        auto y = 0;
+        // Just reverse half to avoid overflow.
+        while (y < x) {
+            y = y * 10 + x % 10;
+            x /= 10;
         }
-        return y == x;
+        return (y == x || y / 10 == x);
     }
 };
