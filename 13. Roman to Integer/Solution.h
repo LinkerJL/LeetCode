@@ -10,15 +10,13 @@ public:
         dict['X' - 'A'] = 10;      dict['L' - 'A'] = 50;
         dict['C' - 'A'] = 100;     dict['D' - 'A'] = 500;
         dict['M' - 'A'] = 1000;
-        auto sum = 0, index = 0;
         auto len = s.size();
-        while (index < len) {
-            if (s[index + 1] != '\0' && dict[s[index] - 'A'] < dict[s[index + 1] - 'A']) {
-                sum += dict[s[index + 1] - 'A'] - dict[s[index] - 'A'];
-                index += 2;
+        auto sum = (len > 0) ? dict[s[len - 1] - 'A'] : 0;
+        for (int i = len - 2; i >= 0; --i) {
+            if (dict[s[i] - 'A'] < dict[s[i + 1] - 'A']) {
+                sum -= dict[s[i] - 'A'];
             } else {
-                sum += dict[s[index] - 'A'];
-                index += 1;
+                sum += dict[s[i] - 'A'];
             }
         }
         return sum;
