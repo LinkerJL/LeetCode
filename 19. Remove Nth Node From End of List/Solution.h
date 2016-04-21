@@ -9,24 +9,20 @@ struct ListNode {
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        auto a = head, b = head;
-        while (a->next) {
-            a = a->next;
+        auto a = &head;
+        auto b = head;
+        while (n > 1) {
             --n;
-            if (n < 0) {
-                b = b->next;
-            }
+            b = b->next;
         }
-        if (n > 0) {
-            //a = head->next;
-            //delete head;
-            //return a;
-            return head->next;
+        while (b->next) {
+            a = &((*a)->next);
+            b = b->next;
         }
-        //a = b->next;
-        //b->next = a->next;
-        //delete a;
-        b->next = b->next->next;
+        //b = *a;
+        //*a = (*a)->next;
+        //delete(b);
+        *a = (*a)->next;
         return head;
     }
 };
