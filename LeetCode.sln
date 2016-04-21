@@ -101,6 +101,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9. Palindrome Number", "9. 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13. Roman to Integer", "13. Roman to Integer\13. Roman to Integer.vcxproj", "{6F5489A6-BB50-4C4A-8244-1426D96E0790}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "19. Remove Nth Node From End of List", "19. Remove Nth Node From End of List\19. Remove Nth Node From End of List.vcxproj", "{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -501,6 +503,14 @@ Global
 		{6F5489A6-BB50-4C4A-8244-1426D96E0790}.Release|x64.Build.0 = Release|x64
 		{6F5489A6-BB50-4C4A-8244-1426D96E0790}.Release|x86.ActiveCfg = Release|Win32
 		{6F5489A6-BB50-4C4A-8244-1426D96E0790}.Release|x86.Build.0 = Release|Win32
+		{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}.Debug|x64.ActiveCfg = Debug|x64
+		{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}.Debug|x64.Build.0 = Debug|x64
+		{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}.Debug|x86.ActiveCfg = Debug|Win32
+		{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}.Debug|x86.Build.0 = Debug|Win32
+		{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}.Release|x64.ActiveCfg = Release|x64
+		{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}.Release|x64.Build.0 = Release|x64
+		{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}.Release|x86.ActiveCfg = Release|Win32
+		{E9D3AEB2-FA7A-4BD7-AEB3-BFB404C2D58C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
