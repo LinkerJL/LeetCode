@@ -4,6 +4,8 @@ using std::string;
 using std::to_string;
 #include <vector>
 using std::vector;
+using std::begin;
+using std::end;
 
 struct TreeNode {
     int val;
@@ -16,27 +18,18 @@ class Solution {
 public:
     vector<string> binaryTreePaths(TreeNode* root) {
         if (!root) {
-            return{};
+            return {};
         }
-        paths.clear();
-        string head = "";
-        DFS(root, head);
-        return paths;
+        if (!(root->left || root->right)) {
+            return { to_string(root->val) };
+        }
+        vector<string> left = binaryTreePaths(root->left);
+        vector<string> right = binaryTreePaths(root->right);
+        left.insert(end(left), begin(right), end(right));
+        string val = to_string(root->val) + "->";
+        for (auto& str : left) {
+            str = val + str;
+        }
+        return left;
     }
-private:
-    void DFS(TreeNode* node, string& path) {
-        string new_path = path + "->" + to_string(node->val);
-        if (!(node->left || node->right)) {
-            paths.push_back(new_path.substr(2));
-            return;
-        }
-        if (node->left) {
-            DFS(node->left, new_path);
-        }
-        if (node->right) {
-            DFS(node->right, new_path);
-        }
-    }
-
-    vector<string> paths;
 };
