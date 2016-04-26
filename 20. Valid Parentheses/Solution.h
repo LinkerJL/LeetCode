@@ -7,19 +7,15 @@ using std::stack;
 class Solution {
 public:
     bool isValid(string s) {
-        if (s == "") {
-            return true;
-        }
-        char match[256] = { 0 };
-        match['('] = ')';
-        match['{'] = '}';
-        match['['] = ']';
+        char trick[] = { ')', ']', '}' };
         stack<char> matching;
-        matching.push(s[0]);
-        auto len = s.length();
-        for (auto i = 1U; i < len; ++i) {
-            if (matching.empty() || match[matching.top()] != s[i]) {
-                matching.push(s[i]);
+        for (auto c : s) {
+            if (c == '(' || c == '[' || c == '{') {
+                matching.push((c / '(') - 1);
+            } else if (matching.empty()) {
+                return false;
+            } else if (c != trick[matching.top()]) {
+                return false;
             } else {
                 matching.pop();
             }
