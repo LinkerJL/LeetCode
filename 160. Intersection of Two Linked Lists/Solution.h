@@ -1,6 +1,4 @@
 #pragma once
-#include <algorithm>
-using std::swap;
 
 struct ListNode {
     int val;
@@ -14,33 +12,20 @@ public:
         if (!(headA && headB)) {
             return nullptr;
         }
-        auto len_a = 0, len_b = 0;
-        auto node_a = headA;
-        while (node_a->next) {
+        auto node_a = headA, node_b = headB;
+        while (node_a != node_b) {
             node_a = node_a->next;
-            ++len_a;
-        }
-        auto node_b = headB;
-        while (node_b->next) {
             node_b = node_b->next;
-            ++len_b;
+            if (node_a == node_b) {
+                return node_a;
+            }
+            if (!node_a) {
+                node_a = headB;
+            }
+            if (!node_b) {
+                node_b = headA;
+            }
         }
-        if (node_a != node_b) {
-            return nullptr;
-        }
-        if (len_a < len_b) {
-            swap(len_a, len_b);
-            swap(headA, headB);
-        }
-        len_a -= len_b;
-        while (len_a) {
-            headA = headA->next;
-            --len_a;
-        }
-        while (headA != headB) {
-            headA = headA->next;
-            headB = headB->next;
-        }
-        return headA;
+        return node_a;
     }
 };
