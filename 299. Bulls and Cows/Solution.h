@@ -1,10 +1,7 @@
 #pragma once
 #include <string>
 using std::string;
-#include <sstream>
-using std::ostringstream;
-#include <algorithm>
-using std::min;
+using std::to_string;
 
 class Solution {
 public:
@@ -15,19 +12,24 @@ public:
         int secret_num[kRange] = { 0 };
         int guess_num[kRange] = { 0 };
         auto len = secret.length();
-        for (auto i = 0U; i < len; ++i) {
+        for (auto i = 0U; i < len; i++) {
             if (secret[i] == guess[i]) {
-                ++As;
+                As++;
+                continue;
+            }
+            if (guess_num[secret[i] - '0'] > 0) {
+                guess_num[secret[i] - '0']--;
+                Bs++;
             } else {
                 secret_num[secret[i] - '0']++;
+            }
+            if (secret_num[guess[i] - '0'] > 0) {
+                secret_num[guess[i] - '0']--;
+                Bs++;
+            } else {
                 guess_num[guess[i] - '0']++;
             }
         }
-        for (auto i = 0; i < kRange; ++i) {
-            Bs += min(secret_num[i], guess_num[i]);
-        }
-        ostringstream oss;
-        oss << As << 'A' << Bs << 'B';
-        return oss.str();
+        return to_string(As) + 'A' + to_string(Bs) + 'B';
     }
 };
