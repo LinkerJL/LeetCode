@@ -113,6 +113,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "299. Bulls and Cows", "299.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "342. Power of Four", "342. Power of Four\342. Power of Four.vcxproj", "{1FC62A98-C8DD-4B6F-9994-5470957353C5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "303. Range Sum Query - Immutable", "303. Range Sum Query - Immutable\303. Range Sum Query - Immutable.vcxproj", "{D973B334-DA08-4622-9781-12229487F3C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -561,6 +563,14 @@ Global
 		{1FC62A98-C8DD-4B6F-9994-5470957353C5}.Release|x64.Build.0 = Release|x64
 		{1FC62A98-C8DD-4B6F-9994-5470957353C5}.Release|x86.ActiveCfg = Release|Win32
 		{1FC62A98-C8DD-4B6F-9994-5470957353C5}.Release|x86.Build.0 = Release|Win32
+		{D973B334-DA08-4622-9781-12229487F3C2}.Debug|x64.ActiveCfg = Debug|x64
+		{D973B334-DA08-4622-9781-12229487F3C2}.Debug|x64.Build.0 = Debug|x64
+		{D973B334-DA08-4622-9781-12229487F3C2}.Debug|x86.ActiveCfg = Debug|Win32
+		{D973B334-DA08-4622-9781-12229487F3C2}.Debug|x86.Build.0 = Debug|Win32
+		{D973B334-DA08-4622-9781-12229487F3C2}.Release|x64.ActiveCfg = Release|x64
+		{D973B334-DA08-4622-9781-12229487F3C2}.Release|x64.Build.0 = Release|x64
+		{D973B334-DA08-4622-9781-12229487F3C2}.Release|x86.ActiveCfg = Release|Win32
+		{D973B334-DA08-4622-9781-12229487F3C2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
