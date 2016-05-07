@@ -12,16 +12,16 @@ public:
         auto start = 0U;
         auto rotated = 0U;
         while (rotated < len) {
-            auto des = start + len - k;
-            auto tmp = nums[des];
+            auto src = start;
+            auto src_val = nums[src];
             do {
-                auto src = (des + len - k) % len;
-                nums[des] = nums[src];
-                des = src;
+                auto des = (src + k) % len;
+                auto des_val = nums[des];
+                nums[des] = src_val;
+                src = des;
+                src_val = des_val;
                 ++rotated;
-            } while (des != start);
-            nums[start] = tmp;
-            ++rotated;
+            } while (src != start);
             ++start;
         }
     }
