@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 using std::vector;
+using std::reverse;
 
 class Solution {
 public:
@@ -9,20 +10,8 @@ public:
         if (len == 0 || (k %= len) == 0) {
             return;
         }
-        auto start = 0U;
-        auto rotated = 0U;
-        while (rotated < len) {
-            auto src = start;
-            auto src_val = nums[src];
-            do {
-                auto des = (src + k) % len;
-                auto des_val = nums[des];
-                nums[des] = src_val;
-                src = des;
-                src_val = des_val;
-                ++rotated;
-            } while (src != start);
-            ++start;
-        }
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin() + k);
+        reverse(nums.begin() + k, nums.end());
     }
 };
