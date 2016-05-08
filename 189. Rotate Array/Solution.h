@@ -10,30 +10,21 @@ public:
         if (len < 1 || (k %= len) == 0) {
             return;
         }
-        inner_rotate(nums.data(), len, k);
-    }
-private:
-    // A-B -> B-A, k = length(B)
-    void inner_rotate(int* head, int len, int k) {
-        if (k == 0) {
-            return;
-        }
-        if (len - k <= k) {
-            // A-B = A-Bl-Br -> Bl-A-Br, length(A) == length(Bl)
-            for (auto i = 0; i < len - k; ++i) {
-                iter_swap(head, head + len - k);
-                ++head;
+        // std::rotate(nums.begin(), nums.end() - k, nums.end());
+        auto first = nums.begin();
+        auto middle = nums.end() - k;
+        auto next = middle;
+        while (first != next) {
+            iter_swap(first, next);
+            ++first;
+            ++next;
+            if (next == nums.end()) {
+                // A-B = Al-Ar-B -> B-Ar-Al => Ar-Al -> Al-Ar
+                next = middle;
+            } else if (first == middle) {
+                // A-B = A-Bl-Br -> Bl-A-Br => A-Br -> Br-A
+                middle = next;
             }
-            // A-Br -> Br-A
-            inner_rotate(head, k, k - (len - k));
-        } else {
-            // A-B = Al-Ar-B -> B-Ar-Al, length(B) == length(Al)
-            for (auto i = 0; i < k; ++i) {
-                iter_swap(head, head + len - k);
-                ++head;
-            }
-            // Ar-Al -> Al-Ar
-            inner_rotate(head, len - k, k);
         }
     }
 };
