@@ -8,22 +8,14 @@ struct ListNode {
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
-        ListNode *pre = nullptr;
-        auto cur = head;
-        while (cur) {
-            if (cur->val == val) {
-                if (pre) {
-                    pre->next = cur->next;
-                    //delete cur;
-                    cur = pre->next;
-                } else {
-                    head = cur->next;
-                    //delete cur;
-                    cur = head;
-                }
+        auto node_ptr = &head;
+        while (*node_ptr) {
+            if ((*node_ptr)->val == val) {
+                //auto node = *node_ptr;
+                *node_ptr = (*node_ptr)->next;
+                //delete node;
             } else {
-                pre = cur;
-                cur = pre->next;
+                node_ptr = &(*node_ptr)->next;
             }
         }
         return head;
