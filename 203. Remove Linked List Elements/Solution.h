@@ -8,16 +8,16 @@ struct ListNode {
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
-        auto node_ptr = &head;
-        while (*node_ptr) {
-            if ((*node_ptr)->val == val) {
-                //auto node = *node_ptr;
-                *node_ptr = (*node_ptr)->next;
-                //delete node;
-            } else {
-                node_ptr = &(*node_ptr)->next;
-            }
+        if (!head) {
+            return nullptr;
         }
-        return head;
+        head->next = removeElements(head->next, val);
+        if (head->val == val) {
+            auto node = head->next;
+            //delete head;
+            return node;
+        } else {
+            return head;
+        }
     }
 };
