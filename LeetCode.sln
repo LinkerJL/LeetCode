@@ -121,6 +121,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "189. Rotate Array", "189. R
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "203. Remove Linked List Elements", "203. Remove Linked List Elements\203. Remove Linked List Elements.vcxproj", "{FBEC3CEF-88A8-4E83-BD1B-233683A9F668}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "225. Implement Stack using Queues", "225. Implement Stack using Queues\225. Implement Stack using Queues.vcxproj", "{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -601,6 +603,14 @@ Global
 		{FBEC3CEF-88A8-4E83-BD1B-233683A9F668}.Release|x64.Build.0 = Release|x64
 		{FBEC3CEF-88A8-4E83-BD1B-233683A9F668}.Release|x86.ActiveCfg = Release|Win32
 		{FBEC3CEF-88A8-4E83-BD1B-233683A9F668}.Release|x86.Build.0 = Release|Win32
+		{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}.Debug|x64.ActiveCfg = Debug|x64
+		{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}.Debug|x64.Build.0 = Debug|x64
+		{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}.Debug|x86.ActiveCfg = Debug|Win32
+		{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}.Debug|x86.Build.0 = Debug|Win32
+		{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}.Release|x64.ActiveCfg = Release|x64
+		{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}.Release|x64.Build.0 = Release|x64
+		{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}.Release|x86.ActiveCfg = Release|Win32
+		{36FB7543-6CC5-4D24-AD4C-D8A3681F85E5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
